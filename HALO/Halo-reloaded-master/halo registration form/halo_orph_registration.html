@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validate(){
+var pw1= document.getElementById("pass").value;
+var pw2= document.getElementById("cpass").value;
+if(pw1!==pw2)
+{
+alert("password and confirm password must be same");
+return false;
+}
+return true;
+
+}    
+</script>
+
+</head>
+<body>
+<h1>Registration</h1>
+<form action="/sign_up" method="post">
+<label for="oname">Orphanage name:</label><br>
+<input type="text" id="oname" name="oname" required><br><br><br>
+
+<label for="pass">Password:</label><br>
+<input type="password" id="pass" name="pass" required><br><br><br>
+
+<label for="cpass">Confirm Password:</label><br>
+<input type="password" id="cpass" name="cpass" required><br><br><br>
+
+<label for="address">Address:</label><br>
+<textarea id="address" name="address" rows="5" cols="30"></textarea><br><br><br>
+
+<label for="mail">E-mail:</label><br>
+<input type="email" id="mail" name="mail" required><br><br><br>
+
+<label for="phone">Mobile No.</label><br>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+<input type="submit" onclick="return validate()" id="submitDetails"
+name="submitDetails" value="submit">
+
+</form>
+</body>
+</html>
